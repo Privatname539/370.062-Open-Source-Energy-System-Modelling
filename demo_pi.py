@@ -1,13 +1,18 @@
-# This program will calculate the area of a circle and volume of a sphere for a given radius
+import numpy as np
 
-import numpy as np                  # Pi will be imported from numpy, alternatively the math module can be imported for Pi
+def calculate_area(r):
+    return np.pi * (r ** 2)
 
-r = int(input("Enter radius: "))    # Enter radius of circle or sphere
+def calculate_volume(r):
+    return (4 / 3) * (r ** 3) * np.pi
 
-A = np.pi*(r**2)                    # Calculates area of circle for given radius
+def main():
+    r = int(input("Enter radius: "))
+    A = calculate_area(r)
+    V = calculate_volume(r)
+    print("Radius: ", r)
+    print("Area: ", round(A, 2))
+    print("Volume: ", round(V, 2))
 
-V = (4/3)*(r**3)*np.pi              # Calculates volume of sphere for given radius
-
-print("Radius: ", r)                # Outputs the given radius
-print("Area: ", round(A,2))         # Outputs the result for area rounded to 2 decimal places
-print("Volume: ", round(V,2))       # Outputs the result for volume rounded to 2 decimal places
+if __name__ == "__main__":
+    main()
