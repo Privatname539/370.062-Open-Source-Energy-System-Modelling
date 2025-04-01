@@ -1,7 +1,7 @@
 import numpy as np
 
 def calculate_area(r):
-    return np.pi * (r ** 2)
+    return    np.pi*(r ** 2)     # <- weird spacing
 
 def calculate_volume(r):
     return (4 / 3) * (r ** 3) * np.pi
